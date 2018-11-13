@@ -1,0 +1,11 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  list-style: none;
+}
+
+.list-word {
+  color: darkcyan;
+  font-weight: bold;
+}
