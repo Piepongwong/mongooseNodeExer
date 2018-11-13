@@ -1,0 +1,18 @@
+body {
+  background-color: lightblue
+}
+
+h3 {
+  font-weight: lighter
+}
+
+.nav {
+  color: red;
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+}
+
+.container {
+  border: 1px solid black;
+}
