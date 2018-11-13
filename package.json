@@ -1,0 +1,26 @@
+{
+  "name": "mongooseNodeExer",
+  "version": "1.0.0",
+  "description": "Alright, so we know how to set up a webserver using NodeJs and the Express framework and we know how to query a database in Compas. So how do use MongoDB in NodeJs? The answer is: with Mongoose.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anakellyc/mongooseNodeExer.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anakellyc/mongooseNodeExer/issues"
+  },
+  "homepage": "https://github.com/anakellyc/mongooseNodeExer#readme",
+  "dependencies": {
+    "expres": "0.0.5",
+    "express": "^4.16.4",
+    "hbs": "^4.0.1",
+    "mongoose": "^5.3.12"
+  }
+}
