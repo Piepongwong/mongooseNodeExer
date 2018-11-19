@@ -1,0 +1,217 @@
+//  app.post('/postRoute', (req, res) {
+    
+//     ) => {
+
+    
+    //what is user's request?
+    //see if request is in our database
+    //return answer
+
+    //logic here
+    //res.send({search : result});
+
+
+});
+   //  res.render("search")
+
+// request is what the clients send to the server and response is what server send back
+// app.get("/", function(request,response){
+
+//     Movie.find(( { rate: { $gt: 9} } ),function(err, result){
+//         response.render("index", { movies: result } )   // listning to request
+//     });
+// });
+
+// question why is the search crieria in the index handle bars insted of a different handle bar?
+
+
+app.get("/new-film", function(req, res) {
+    var userRes = new Movie(req.body);
+    userRes.save();
+    res.render("index");
+ 
+})
+
+
+app.post("/signup", function(req, res) {
+    var userRes = new Movie(req.body);
+    userRes.save();
+    res.render("index");
+ 
+})
+
+================================================
+
+creating a sign up page
+step 1
+
+create a route for the sign up because if the clients wants to visit the
+page sign up he or she shouldget access to the page sign up
+
+so if he or she visits sign up the page pops up
+to get this done 
+
+1. create a handle bar with sign up and put in index.
+2. create app.get route to make the signup page work so
+if the signup page is visited a trigger function is alerted 
+and the arg are passed to make the page alive
+
+In order to create a sign up page and registe new userRes
+we use same method like the add movie but for this we just make i sign up
+
+1. we use add.post method and also create the page we visit with.post
+this way informtion we get is posted to the data base 
+
+//////////////////  steps.
+
+to allow the user log in and check if he has an account we 
+
+1. since we have a database we use a post request trigger
+
+2. once the post request is triggered the user visits the page post 
+the function is triggered takes in request and responce
+and like the movies we check 
+
+3.if the responce matches the database.
+
+to create a log in
+
+1. create a different route cos this is different log in route
+
+get it done on handle bars and display the handle bar on the signup so they
+are on same page.
+
+
+
+
+// Handling asynchronous code with a callback and promises
+movie.find({}, function(err, result) {
+    if(err) // do something with error
+    else // do something with result
+})
+
+
+// Handling asynchronous code with a promise
+movie.find({title: "Note BOok"})
+.then((result)=> {
+    // do something with result
+})
+.catch((err)=> {
+    // do something with error
+})
+
+
+
+Collapse 
+
+
+collection sum up the total of all the parts of the databse instance combined
+
+and 
+
+
+// promises method
+
+// app.post("/log-in", function(req, res) {
+
+//     Users.find({ username: req.body.username,
+//                 password: req.body.password } )
+
+//          .then((result)=> { res.send ("welcome back good to have you!") })
+
+//          .catch((err)=> { res.redirect("nice try!")
+            
+//         })
+
+//     })
+
+
+
+
+ 
+    // app.post("/post-movie", function(req, res) {
+//     var userRes = new Movie(req.body);
+//     userRes.save();
+//     res.render("post-movie");
+ 
+// })
+
+// movie sinup
+
+st1  set cookie
+get cookeie to work on the route i want 
+
+based on value use on sign in 
+
+
+Encryption
+
+step 1  npm install bcrypt
+
+bcrypt.hash(myPlaintextPassword, saltRounds, function(err, hash) {
+  // Store hash in your password DB.     this is used to encrpt the password from the start 
+});
+
+we decrpt when the user wants to log in because we cant to compare if the enterd password is same
+with the encrpted password
+
+and we encrpty when the user creates an account and entes his or her user name
+// Load hash from your password DB.
+
+
+bcrypt.compare(myPlaintextPassword, hash, function(err, res) {
+    // res == true
+});
+
+bcrypt.compare(someOtherPlaintextPassword, hash, function(err, res) {
+    // res == false
+});  
+if we want to compare we get the encrpted password from the data base and compare when the user wants to log in if they
+are equal
+ 
+ https://www.npmjs.com/package/bcrypt
+
+
+ login setting
+
+ loging out clearing 
+
+ and checking on every route we want asses to
+
+
+ based on input we can find the output but the revrse is neve the case so we cant finf the 
+
+
+
+Steps for logging in
+
+1. create encrption when we want to create account and then when its created 
+
+store in database
+
+when the user wants to log in we encrpty password and then compare with the encprtion stored in the data abse 
+then set cookies
+then allow logging
+
+
+app.get('/superPersonal', function(req, res) {
+    if(req.cookies.loggedIn === "true") {
+        res.send("Super personal stuff")
+    } else {
+        res.redirect("login")
+    }
+});
+
+we need to set on all routes that need to be safe.
+
+
+API  if we ask information from API it gives us all information about the API  ??
+
+poker API  read documentations for information is the first step
+
+HOW TO SET AND CLEAR COOKIE
+1st step set the cookie and make it work and on every route needed
+
+if one is logged in get the cookie 
+
+and if one is logged out clear the cookie
